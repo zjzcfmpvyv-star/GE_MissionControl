@@ -5,19 +5,31 @@
 :root {
   --bg: 245 247 252;
   --fg: 20 24 36;
+  --accent: 74 111 255;
+  --danger: 239 68 68;
+  --warn: 245 158 11;
+  --success: 16 185 129;
   --panel: 255 255 255 / 0.62;
   --panel-border: 255 255 255 / 0.45;
+  --panel-shadow: 0 10px 30px rgba(16, 24, 40, 0.08);
 }
+
 .dark {
   --bg: 10 14 22;
   --fg: 231 235 245;
+  --accent: 122 162 255;
   --panel: 24 30 44 / 0.48;
   --panel-border: 255 255 255 / 0.12;
+  --panel-shadow: 0 16px 40px rgba(0,0,0,0.45);
 }
 
+* { box-sizing: border-box; }
+
 body {
+  margin: 0;
   background: rgb(var(--bg));
   color: rgb(var(--fg));
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 .glass {
@@ -25,4 +37,9 @@ body {
   background: rgba(var(--panel));
   border: 1px solid rgba(var(--panel-border));
   border-radius: 1rem;
+  box-shadow: var(--panel-shadow);
+}
+
+.kpi {
+  @apply glass p-4;
 }
