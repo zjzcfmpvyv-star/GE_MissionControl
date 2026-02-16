@@ -1,0 +1,13 @@
+[
+  {"code":"JA","name":"JARVIS","role":"Chief Strategy Officer","division":"Leadership","status":"online","tags":["Strategic Planning","Task Orchestration"]},
+  {"code":"AT","name":"ATLAS","role":"Senior Research Analyst","division":"Research","status":"online","tags":["Deep Research","Web Search"]},
+  {"code":"TR","name":"TRENDY","role":"Viral Scout","division":"Research","status":"online","tags":["Trend Detection","Signal Scan"]},
+  {"code":"SC","name":"SCRIBE","role":"Content Director","division":"Content","status":"online","tags":["Content Creation","Voice Analysis"]},
+  {"code":"CL","name":"CLAWD","role":"Senior Software Engineer","division":"Development","status":"issue","tags":["Full-stack Development","Agent Review"]},
+  {"code":"SE","name":"SENTINEL","role":"QA & Business Monitor","division":"Development","status":"online","tags":["Uptime Monitoring","Code Review"]},
+  {"code":"PI","name":"PIXEL","role":"Lead Designer","division":"Design","status":"issue","tags":["Design Concepts","Image Generation"]},
+  {"code":"NO","name":"NOVA","role":"Video Production Lead","division":"Design","status":"issue","tags":["Video Planning","Video Generation"]},
+  {"code":"VI","name":"VIBE","role":"Senior Motion Designer","division":"Design","status":"issue","tags":["Motion Graphics","Launch Videos"]},
+  {"code":"SA","name":"SAGE","role":"User Success Agent","division":"User Success","status":"issue","tags":["User Segmentation","Personalized Emails"]},
+  {"code":"CP","name":"CLIP","role":"Clipping Agent","division":"Product","status":"online","tags":["Video Clippings","Caption Generation"]}
+]

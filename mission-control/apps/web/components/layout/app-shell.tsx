@@ -17,6 +17,7 @@ import { ReactNode } from 'react';
 
 const nav = [
   { href: '/overview', label: 'Dashboard', icon: ChartNoAxesCombined },
+  { href: '/office', label: 'Office', icon: Bot },
   { href: '/agents', label: 'Agents', icon: Bot },
   { href: '/models', label: 'API Usage', icon: Activity },
   { href: '/agile', label: 'Sprint Board', icon: KanbanSquare },
