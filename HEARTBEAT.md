@@ -1,25 +1,24 @@
-# HEARTBEAT.md — GoldenEra Minimal Ops Loop
+# HEARTBEAT.md — GoldenEra Focused Maintenance
 
-If heartbeat runs, do **only** these checks (fast + high-signal):
+When heartbeat runs, perform only these checks:
 
-1. Mission Control repo health
-   - `git status --short`
-   - detect uncommitted critical work
+1) Mission Control code health
+- `git status --short`
+- detect unfinished critical work
 
-2. OpenClaw runtime health
-   - gateway reachable?
-   - channel errors?
-   - obvious crash/restart loops?
+2) Runtime health
+- `openclaw status --deep`
+- watch for gateway/channel failures
 
-3. Token/cost risk scan
-   - unusual token spikes
-   - repeated failing loops causing waste
+3) Token/cost risk
+- check unusual spikes or repeated loops
+- flag potential waste
 
-4. Immediate action rule
-   - If urgent issue found: report concise alert with exact fix suggestion
-   - If nothing meaningful changed: `HEARTBEAT_OK`
+4) Alert rule
+- If urgent issue exists: send concise alert + fix
+- If nothing material changed: `HEARTBEAT_OK`
 
 Constraints:
-- No broad exploratory tasks during heartbeat
-- No non-essential long-running jobs
-- Keep heartbeat response short unless alerting
+- no broad exploration
+- no long-running nonessential jobs
+- keep heartbeat concise unless alerting

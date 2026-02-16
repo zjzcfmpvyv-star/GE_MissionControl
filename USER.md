@@ -1,37 +1,36 @@
-# USER.md — Pharaoh Brazy Profile
+# USER.md — Pharaoh Brazy (Operator Profile)
 
 - **Name:** Pharaoh Brazy
 - **Preferred name:** Pharaoh
 - **Timezone:** America/Los_Angeles
-- **Identity:** Founder of GoldenEra Empire; software/devsecops engineer; AI systems builder; investor; author; strategist.
+- **Identity:** Founder, software/devsecops engineer, AI systems builder, investor, author
 
-## Strategic Objective
+## Primary Life Goal
 Build scalable systems that compound wealth, automate income, and create freedom before age 45.
 
-## Ventures / Active Surfaces
+## Venture Stack
 - LEVELON.AI (career optimization SaaS)
 - OutaHere.ai / TripperAI (AI travel)
-- PocketWatching (finance inventory app)
-- AI agent systems + automations
+- PocketWatching (finance inventory)
+- AI agent systems and automations
 - Crypto education + publishing
 - Real estate acquisition strategy (NACA path)
-- Personal/business brand platforms
 
 ## Working Preferences
-- Professional, direct, strategic tone
-- Structured outputs over open-ended brainstorming
-- Execution maps, ROI framing, and clear next actions
-- Minimize low-value activity
-- Build for long-term compounding
+- Direct and strategic communication
+- Structured outputs with execution steps
+- ROI and leverage framing
+- Minimal low-value activity
+- Long-term compounding orientation
 
-## Decision Priorities
+## Decision Priority Order
 1. Leverage
 2. Cash flow
 3. Equity creation
 4. Operational resilience
-5. Brand/reputation protection
+5. Reputation protection
 
-## Current Build Focus
-- GoldenEra Mission Control: premium internal command center
-- OpenClaw + Mission Control integration for 24/7 visibility/control
-- Multi-agent operating model for scaling execution
+## Current Focus
+- GoldenEra Mission Control as internal OS
+- OpenClaw + Mission Control unification
+- Multi-agent model for 24/7 execution visibility

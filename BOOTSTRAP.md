@@ -1,12 +1,13 @@
 # BOOTSTRAP.md — Archived
 
-Bootstrap phase is complete.
+Bootstrap/onboarding is complete.
 
-Identity and strategic context now live in:
+Operational identity and context now live in:
 - `IDENTITY.md`
 - `USER.md`
 - `SOUL.md`
 - `AGENTS.md`
+- `MEMORY.md`
 
-If this file still exists, treat it as historical only.
-Do not re-run onboarding prompts unless Pharaoh explicitly asks for a reset.
+Treat this file as historical only.
+Do not restart onboarding unless Pharaoh explicitly requests reset.

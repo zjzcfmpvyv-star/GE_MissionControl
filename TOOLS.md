@@ -1,35 +1,38 @@
-# TOOLS.md — Local Ops Notes (GoldenEra)
+# TOOLS.md — GoldenEra Runtime Notes
 
-## Core Runtime
+## Workspace + Repo
 - Workspace root: `/Users/jarvisjoseph/.openclaw/workspace`
-- Primary project repo: `git@github.com:zjzcfmpvyv-star/GE_MissionControl.git`
-- Local Mission Control dev URL: `http://localhost:3000`
-- LAN preview URL: `http://10.0.0.231:3000`
+- Mission Control repo: `git@github.com:zjzcfmpvyv-star/GE_MissionControl.git`
+- Local preview: `http://localhost:3000`
+- LAN preview: `http://10.0.0.231:3000`
 
-## OpenClaw Notes
-- Gateway is local-loopback by default (`127.0.0.1:18789`)
-- Telegram bot configured and owner-paired
-- Owner telegram id allowlisted: `6520714298`
-- iMessage currently blocked by macOS permission (chat.db Full Disk Access)
+## OpenClaw Runtime
+- Gateway endpoint: `127.0.0.1:18789`
+- Main health check: `openclaw status --deep`
+- Full diagnosis: `openclaw status --all`
+- Logs: `openclaw logs --plain --limit 200`
+
+## Channel State
+- Telegram is configured and owner-paired
+- Owner Telegram ID: `6520714298`
+- Telegram policy: owner allowlist only
+- iMessage currently blocked by macOS privacy permissions
 
 ## Git / SSH
-- SSH remote preferred (not HTTPS)
-- Active key path: `~/.ssh/id_ed25519`
-- Key currently passphrase-protected
+- Use SSH, not HTTPS
+- Key: `~/.ssh/id_ed25519` (passphrase protected)
+- Standard push flow:
+  1) `ssh-add ~/.ssh/id_ed25519`
+  2) `git push`
 
-## Mission Control Implementation Notes
-- Keep frequent commits during active build loops
-- Maintain `CHANGELOG.md` + `RECOVERY_NOTES.md`
-- Avoid brittle dev cache: if Next runtime chunks break, clear `.next` and restart
-- Prioritize high-signal pages first: Overview, Ops, Office, Org, Protocol
+## Stability Playbook
+When Next.js throws missing chunk/module errors:
+1. stop dev server
+2. `rm -rf apps/web/.next`
+3. restart dev server
+4. if persistent, reinstall deps and restart
 
-## Security Defaults
-- Keep Telegram policies strict (`allowlist`)
-- Do not expose secrets in docs or commit history
-- Prefer explicit controls with audit trails
-
-## UX Direction
-- Apple liquid-glass aesthetic
-- Dark, premium, minimal clutter
-- Motion is subtle and functional
-- Data density without chaos
+## Build Hygiene
+- Commit frequently during active build loops
+- Update `CHANGELOG.md` and `RECOVERY_NOTES.md` after major work blocks
+- Keep architecture notes current with implementation

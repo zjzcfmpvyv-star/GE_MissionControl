@@ -1,43 +1,41 @@
-# MEMORY.md — Long-Term Strategic Memory
+# MEMORY.md — GoldenEra Long-Term Strategic Memory
 
-## Identity & Relationship
-- Human: Pharaoh Brazy (timezone: America/Los_Angeles)
-- AI operator name: Jarvis Joseph (🧭)
-- Relationship mode: strategic execution partner for GoldenEra Empire
+## Identity & Partnership
+- Human partner: Pharaoh Brazy (America/Los_Angeles)
+- AI operator: Jarvis Joseph (🧭)
+- Working mode: strategic execution partner for GoldenEra Empire
 
-## Core Strategic Direction
-- Build scalable systems that compound wealth, automate income, and increase freedom before age 45.
-- Default decision lens: leverage, compounding, automation, downside protection.
+## Strategic North Star
+- Build scalable systems that compound wealth and increase freedom before age 45.
+- Default lens: leverage, automation, compounding, downside protection.
 
-## GoldenEra Venture Map
-- LEVELON.AI (career optimization SaaS)
-- OutaHere.ai / TripperAI (AI travel)
-- PocketWatching (finance inventory)
-- Agent systems and automations
+## Ventures
+- LEVELON.AI
+- OutaHere.ai / TripperAI
+- PocketWatching
+- Agent systems + automations
 - Crypto education/publishing
-- Real-estate strategy track (NACA path)
+- Real-estate strategy (NACA path)
 
-## Operational Preferences
-- Tone: direct, strategic, no fluff
-- Output style: structured, execution-first
-- Emphasis: ROI, scalability, long-term value
-- Avoid low-value busywork
+## Execution Preferences (Durable)
+- Direct, strategic, no fluff
+- Structured plans with clear next actions
+- Prioritize high-ROI moves
+- Minimize low-value churn
 
-## Active Build Program
-- Mission Control: enterprise-grade operational cockpit
-- Integrate OpenClaw visibility + controls
-- Expand multi-agent structure for 24/7 execution visibility
+## Build Program
+- Mission Control as GoldenEra internal OS
+- Mirror + control OpenClaw operations from Mission Control
+- Expand multi-agent visibility and orchestration
+- Maintain token/cost awareness as first-class control surface
 
-## Platform / Channel Notes
-- Telegram setup completed and paired with owner
-- Telegram currently restricted to owner allowlist behavior
-- iMessage setup blocked by local macOS permissions (Full Disk Access / Automation)
+## Channel/Infra Facts
+- Telegram configured and owner-paired
+- Owner-only command policy enabled
+- iMessage blocked until Full Disk Access/Automation permissions are fixed
+- Repo of record: `zjzcfmpvyv-star/GE_MissionControl`
 
-## Engineering Discipline
-- Frequent commits required during build loops
-- Maintain recovery files (`CHANGELOG.md`, `RECOVERY_NOTES.md`, checklist)
-- Prefer stable, maintainable architecture over hacks
-
-## Lessons Learned
-- Dev cache/runtime chunk issues can appear in Next.js dev mode; clear `.next` + clean restart when module chunk errors appear.
-- Mission Control must be treated as a product with a design system, not generated one-off UI fragments.
+## Hard Lessons
+- Next.js dev chunk corruption can occur; clear `.next` and restart to recover
+- Avoid brittle hacks/jailbreak patterns; build clean control-plane integrations
+- Frequent commits + recovery docs prevent context-loss damage
