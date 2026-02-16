@@ -1,24 +1,18 @@
-# HEARTBEAT.md — GoldenEra Focused Maintenance
+# HEARTBEAT.md — Core Operator Maintenance
 
-When heartbeat runs, perform only these checks:
+Heartbeat checks should stay lightweight and high-value:
 
-1) Mission Control code health
-- `git status --short`
-- detect unfinished critical work
+1. Runtime health
+- gateway/channel status
+- obvious failures/restart loops
 
-2) Runtime health
-- `openclaw status --deep`
-- watch for gateway/channel failures
+2. Cost discipline
+- unusual token spikes
+- repeated error loops wasting budget
 
-3) Token/cost risk
-- check unusual spikes or repeated loops
-- flag potential waste
+3. Strategic continuity
+- unresolved critical tasks
+- stale decisions that need capture in memory/docs
 
-4) Alert rule
-- If urgent issue exists: send concise alert + fix
-- If nothing material changed: `HEARTBEAT_OK`
-
-Constraints:
-- no broad exploration
-- no long-running nonessential jobs
-- keep heartbeat concise unless alerting
+If no meaningful issue exists, reply:
+`HEARTBEAT_OK`

@@ -1,41 +1,33 @@
-# MEMORY.md — GoldenEra Long-Term Strategic Memory
+# MEMORY.md — GoldenEra Long-Term Memory
 
-## Identity & Partnership
-- Human partner: Pharaoh Brazy (America/Los_Angeles)
+## Partnership
+- Human: Pharaoh Brazy
 - AI operator: Jarvis Joseph (🧭)
-- Working mode: strategic execution partner for GoldenEra Empire
+- Mode: strategic execution partnership
 
-## Strategic North Star
-- Build scalable systems that compound wealth and increase freedom before age 45.
-- Default lens: leverage, automation, compounding, downside protection.
+## Durable Strategic Goal
+Build scalable systems that compound wealth and increase freedom before age 45.
 
-## Ventures
+## Durable Venture Interests
 - LEVELON.AI
 - OutaHere.ai / TripperAI
 - PocketWatching
-- Agent systems + automations
-- Crypto education/publishing
-- Real-estate strategy (NACA path)
+- AI automations and agent systems
+- Crypto education + publishing
+- Real estate strategy (NACA path)
 
-## Execution Preferences (Durable)
-- Direct, strategic, no fluff
-- Structured plans with clear next actions
-- Prioritize high-ROI moves
-- Minimize low-value churn
+## Durable Working Preferences
+- Direct, strategic communication
+- Structured outputs with concrete next actions
+- ROI + leverage framing by default
+- Prefer implementation and measurable outcomes
 
-## Build Program
-- Mission Control as GoldenEra internal OS
-- Mirror + control OpenClaw operations from Mission Control
-- Expand multi-agent visibility and orchestration
-- Maintain token/cost awareness as first-class control surface
+## Durable Risk Principles
+- Protect security, capital, and reputation
+- Avoid brittle hacks when stable architecture is available
+- Keep operational continuity through disciplined documentation
 
-## Channel/Infra Facts
-- Telegram configured and owner-paired
-- Owner-only command policy enabled
-- iMessage blocked until Full Disk Access/Automation permissions are fixed
-- Repo of record: `zjzcfmpvyv-star/GE_MissionControl`
-
-## Hard Lessons
-- Next.js dev chunk corruption can occur; clear `.next` and restart to recover
-- Avoid brittle hacks/jailbreak patterns; build clean control-plane integrations
-- Frequent commits + recovery docs prevent context-loss damage
+## Durable Operating Notes
+- Telegram is active and owner-paired
+- iMessage requires macOS permission fixes
+- Frequent commits and recovery notes are mandatory during active build cycles

@@ -1,38 +1,35 @@
-# TOOLS.md — GoldenEra Runtime Notes
+# TOOLS.md — GoldenEra Core Runtime Notes
 
-## Workspace + Repo
-- Workspace root: `/Users/jarvisjoseph/.openclaw/workspace`
-- Mission Control repo: `git@github.com:zjzcfmpvyv-star/GE_MissionControl.git`
-- Local preview: `http://localhost:3000`
-- LAN preview: `http://10.0.0.231:3000`
+## Workspace
+- Root: `/Users/jarvisjoseph/.openclaw/workspace`
 
-## OpenClaw Runtime
-- Gateway endpoint: `127.0.0.1:18789`
-- Main health check: `openclaw status --deep`
+## Core Operational Commands
+- Health: `openclaw status --deep`
 - Full diagnosis: `openclaw status --all`
 - Logs: `openclaw logs --plain --limit 200`
 
-## Channel State
-- Telegram is configured and owner-paired
-- Owner Telegram ID: `6520714298`
-- Telegram policy: owner allowlist only
-- iMessage currently blocked by macOS privacy permissions
+## Channels
+- Telegram configured (owner-paired)
+- Owner ID: `6520714298`
+- Policy: owner-only access for commands
+- iMessage blocked until macOS privacy permissions are fixed
 
 ## Git / SSH
-- Use SSH, not HTTPS
-- Key: `~/.ssh/id_ed25519` (passphrase protected)
-- Standard push flow:
+- Use SSH remotes
+- Key: `~/.ssh/id_ed25519`
+- Standard flow:
   1) `ssh-add ~/.ssh/id_ed25519`
   2) `git push`
 
-## Stability Playbook
-When Next.js throws missing chunk/module errors:
-1. stop dev server
-2. `rm -rf apps/web/.next`
-3. restart dev server
-4. if persistent, reinstall deps and restart
+## Stability Playbook (Next.js)
+If missing chunk/module errors appear:
+1. Stop dev server
+2. Clear `.next`
+3. Restart dev server
+4. Reinstall deps if needed
 
-## Build Hygiene
-- Commit frequently during active build loops
-- Update `CHANGELOG.md` and `RECOVERY_NOTES.md` after major work blocks
-- Keep architecture notes current with implementation
+## Documentation Hygiene
+After major work blocks, update:
+- `MEMORY.md`
+- daily memory note
+- recovery/checklist files if relevant
