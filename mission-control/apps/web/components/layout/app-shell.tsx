@@ -9,6 +9,8 @@ import {
   Clock3,
   FileText,
   KanbanSquare,
+  Network,
+  ScrollText,
   Settings,
   ShieldAlert,
   Workflow
@@ -18,14 +20,16 @@ import { ReactNode } from 'react';
 const nav = [
   { href: '/overview', label: 'Dashboard', icon: ChartNoAxesCombined },
   { href: '/office', label: 'Office', icon: Bot },
+  { href: '/org', label: 'Org Chart', icon: Network },
+  { href: '/protocol', label: 'Protocol', icon: ScrollText },
+  { href: '/ops', label: 'Ops Command', icon: Workflow },
   { href: '/agents', label: 'Agents', icon: Bot },
   { href: '/models', label: 'API Usage', icon: Activity },
   { href: '/agile', label: 'Sprint Board', icon: KanbanSquare },
   { href: '/security', label: 'Risk Monitor', icon: ShieldAlert },
   { href: '/automation', label: 'Cron Jobs', icon: Clock3 },
   { href: '/logs', label: 'Journal', icon: FileText },
-  { href: '/settings', label: 'Settings', icon: Settings },
-  { href: '/strategy', label: 'Strategy', icon: Workflow }
+  { href: '/settings', label: 'Settings', icon: Settings }
 ];
 
 export function AppShell({ children }: { children: ReactNode }) {
