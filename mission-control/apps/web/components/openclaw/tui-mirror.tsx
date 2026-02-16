@@ -9,7 +9,16 @@ type Payload = {
   error?: string;
 };
 
-type Action = 'gatewayStart' | 'gatewayStop' | 'gatewayRestart' | 'doctorFix' | 'statusDeep' | 'logsTail';
+type Action =
+  | 'gatewayStart'
+  | 'gatewayStop'
+  | 'gatewayRestart'
+  | 'doctorFix'
+  | 'statusDeep'
+  | 'statusUsage'
+  | 'channelsStatus'
+  | 'gatewayProbe'
+  | 'logsTail';
 
 function Row({ k, v }: { k: string; v: unknown }) {
   const value = typeof v === 'object' ? JSON.stringify(v) : String(v);
@@ -59,10 +68,12 @@ export function TuiMirror() {
   if (!data.ok) return <section className="glass p-4 text-sm text-danger">TUI mirror error: {data.error}</section>;
 
   const status = data.status ?? {};
-  const overview = status.overview ?? status.summary ?? {};
-  const channels = status.channels ?? [];
-  const sessions = status.sessions ?? [];
-  const security = status.securityAudit ?? status.security ?? {};
+  const overview = status && typeof status === 'object' ? (status.overview ?? status.summary ?? {}) : {};
+  const channelsRaw = status && typeof status === 'object' ? status.channels ?? [] : [];
+  const sessionsRaw = status && typeof status === 'object' ? status.sessions ?? [] : [];
+  const channels = Array.isArray(channelsRaw) ? channelsRaw : [];
+  const sessions = Array.isArray(sessionsRaw) ? sessionsRaw : [];
+  const security = status && typeof status === 'object' ? (status.securityAudit ?? status.security ?? {}) : {};
 
   return (
     <div className="space-y-4">
@@ -78,6 +89,9 @@ export function TuiMirror() {
           <button disabled={busy} className="glass px-3 py-1 text-xs" onClick={() => run('gatewayRestart')}>Gateway Restart</button>
           <button disabled={busy} className="glass px-3 py-1 text-xs" onClick={() => run('doctorFix')}>Doctor Fix</button>
           <button disabled={busy} className="glass px-3 py-1 text-xs" onClick={() => run('statusDeep')}>Deep Status</button>
+          <button disabled={busy} className="glass px-3 py-1 text-xs" onClick={() => run('statusUsage')}>Usage</button>
+          <button disabled={busy} className="glass px-3 py-1 text-xs" onClick={() => run('channelsStatus')}>Channels</button>
+          <button disabled={busy} className="glass px-3 py-1 text-xs" onClick={() => run('gatewayProbe')}>Gateway Probe</button>
           <button disabled={busy} className="glass px-3 py-1 text-xs" onClick={() => run('logsTail')}>Tail Logs</button>
         </div>
 
@@ -103,7 +117,7 @@ export function TuiMirror() {
       <section className="glass p-4">
         <div className="text-xs uppercase tracking-[0.12em] opacity-60 mb-2">Channels</div>
         <div className="space-y-2">
-          {(channels as any[]).slice(0, 12).map((c, i) => (
+          {channels.slice(0, 12).map((c: any, i: number) => (
             <div className="glass p-3 text-xs" key={i}>
               <div className="font-medium">{c.channel ?? c.name ?? `channel-${i}`}</div>
               <div className="opacity-70">{JSON.stringify(c)}</div>
@@ -115,7 +129,7 @@ export function TuiMirror() {
       <section className="glass p-4">
         <div className="text-xs uppercase tracking-[0.12em] opacity-60 mb-2">Sessions</div>
         <div className="space-y-2">
-          {(sessions as any[]).slice(0, 10).map((s, i) => (
+          {sessions.slice(0, 10).map((s: any, i: number) => (
             <div className="glass p-3 text-xs" key={i}>
               <div className="font-medium">{s.key ?? s.id ?? `session-${i}`}</div>
               <div className="opacity-70">{JSON.stringify(s)}</div>

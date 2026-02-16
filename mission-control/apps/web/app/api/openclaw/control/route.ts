@@ -1,6 +1,15 @@
 import { execSync } from 'node:child_process';
 
-type Action = 'gatewayStart' | 'gatewayStop' | 'gatewayRestart' | 'doctorFix' | 'statusDeep' | 'logsTail';
+type Action =
+  | 'gatewayStart'
+  | 'gatewayStop'
+  | 'gatewayRestart'
+  | 'doctorFix'
+  | 'statusDeep'
+  | 'statusUsage'
+  | 'channelsStatus'
+  | 'gatewayProbe'
+  | 'logsTail';
 
 const commands: Record<Action, string> = {
   gatewayStart: 'openclaw gateway start',
@@ -8,6 +17,9 @@ const commands: Record<Action, string> = {
   gatewayRestart: 'openclaw gateway restart',
   doctorFix: 'openclaw doctor --fix',
   statusDeep: 'openclaw status --deep',
+  statusUsage: 'openclaw status --usage',
+  channelsStatus: 'openclaw channels status',
+  gatewayProbe: 'openclaw gateway probe',
   logsTail: 'openclaw logs --limit 120 --plain'
 };
 
