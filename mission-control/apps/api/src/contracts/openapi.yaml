@@ -1,0 +1,66 @@
+openapi: 3.1.0
+info:
+  title: GoldenEra Mission Control API
+  version: 0.1.0
+servers:
+  - url: /api
+paths:
+  /overview:
+    get:
+      summary: Executive dashboard aggregate
+      responses:
+        '200':
+          description: OK
+  /agents:
+    get:
+      summary: List agents with runtime status
+      responses:
+        '200': { description: OK }
+  /agents/{id}/control:
+    post:
+      summary: Control an agent
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: { type: string, format: uuid }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [action]
+              properties:
+                action:
+                  type: string
+                  enum: [pause, resume, restart, escalate]
+      responses:
+        '202': { description: Accepted }
+  /usage/tokens:
+    get:
+      summary: Token and cost aggregates
+      parameters:
+        - in: query
+          name: period
+          schema: { type: string, enum: [day, month] }
+      responses:
+        '200': { description: OK }
+  /agile/boards:
+    get:
+      summary: List boards and columns
+      responses:
+        '200': { description: OK }
+  /security/risk:
+    get:
+      summary: Risk scores and active alerts
+      responses:
+        '200': { description: OK }
+
+x-realtime:
+  websocket:
+    channels:
+      - agent.status.*
+      - usage.tokens.*
+      - risk.alerts.*
+      - ops.health.*

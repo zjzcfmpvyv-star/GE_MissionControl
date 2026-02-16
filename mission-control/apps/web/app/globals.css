@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 245 247 252;
+  --fg: 20 24 36;
+  --panel: 255 255 255 / 0.62;
+  --panel-border: 255 255 255 / 0.45;
+}
+.dark {
+  --bg: 10 14 22;
+  --fg: 231 235 245;
+  --panel: 24 30 44 / 0.48;
+  --panel-border: 255 255 255 / 0.12;
+}
+
+body {
+  background: rgb(var(--bg));
+  color: rgb(var(--fg));
+}
+
+.glass {
+  backdrop-filter: blur(20px);
+  background: rgba(var(--panel));
+  border: 1px solid rgba(var(--panel-border));
+  border-radius: 1rem;
+}
